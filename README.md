@@ -1,3 +1,3 @@
 # ai-fintech-portfolio
 Portfolio of AI and FinTech projects 
-This is my attempt to share my portfolio.
+Applied AI and policy work at the intersection of machine learning, financial regulation, and Southeast Asian markets.
