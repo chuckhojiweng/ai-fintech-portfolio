@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a2e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-nunito);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-nunito), system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Child-friendly scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cecddd;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b0b0cc;
+}
+
+/* Hide scrollbar for suggested questions */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Safe area for bottom nav on mobile */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Blockly workspace overrides for child-friendliness */
+.blocklyToolboxDiv {
+  border-right: 2px solid #e8e8f0 !important;
+}
+
+.blocklyFlyoutBackground {
+  fill: #f8f8ff !important;
+}
+
+.blocklyTreeRow {
+  padding: 8px 16px !important;
+  margin: 2px 4px !important;
+  border-radius: 12px !important;
+}
+
+.blocklyTreeRow:hover {
+  background-color: #e8e8f0 !important;
+}
