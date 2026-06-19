@@ -1,0 +1,13 @@
+{
+  "id": "01-first-steps",
+  "slug": "first-steps",
+  "title": "First Steps",
+  "description": "Learn the basics of coding by helping CoCo explore!",
+  "sortOrder": 1,
+  "themeConfig": {
+    "primaryColor": "#4CAF50",
+    "backgroundColor": "#E8F5E9",
+    "backgroundImage": "garden",
+    "musicTrack": "gentle-adventure"
+  }
+}

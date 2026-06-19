@@ -1,0 +1,87 @@
+{
+  "id": "lesson-hello-coco",
+  "chapterId": "01-first-steps",
+  "slug": "hello-coco",
+  "title": "Hello, CoCo!",
+  "sortOrder": 1,
+  "lessonType": "guided",
+  "concepts": ["sequencing", "motion"],
+  "difficulty": "easy",
+  "availableBlocks": [
+    "event_when_flag_clicked",
+    "motion_move_steps",
+    "motion_turn_right",
+    "motion_turn_left",
+    "looks_say"
+  ],
+  "phases": [
+    {
+      "type": "narrative",
+      "scenes": [
+        {
+          "background": "garden",
+          "character": "coco",
+          "animation": "coco-wave",
+          "subtitle": "Hi! I'm CoCo! I love to explore, but I need YOUR help to move!",
+          "duration": 4000
+        },
+        {
+          "background": "garden",
+          "character": "coco",
+          "animation": "coco-excited",
+          "subtitle": "Can you use the coding blocks to help me walk forward?",
+          "duration": 3000
+        }
+      ]
+    },
+    {
+      "type": "guided_coding",
+      "instructions": [
+        {
+          "text": "Drag a 'when flag clicked' block to start!",
+          "highlightToolbox": "event",
+          "highlightBlock": "event_when_flag_clicked",
+          "hintDelayMs": 15000,
+          "hints": [
+            "Look for the yellow blocks!",
+            "The flag block is at the top of the yellow blocks.",
+            { "type": "ghost_block", "block": "event_when_flag_clicked", "position": { "x": 200, "y": 100 } }
+          ]
+        },
+        {
+          "text": "Now add a 'move 10 steps' block underneath!",
+          "highlightToolbox": "motion",
+          "highlightBlock": "motion_move_steps",
+          "hintDelayMs": 15000,
+          "hints": [
+            "The blue blocks make CoCo move!",
+            "Try the 'move steps' block — it's the first blue block.",
+            { "type": "ghost_block", "block": "motion_move_steps", "position": { "x": 200, "y": 150 } }
+          ]
+        }
+      ],
+      "availableBlocks": ["event_when_flag_clicked", "motion_move_steps"],
+      "sprites": ["coco"],
+      "background": "garden"
+    },
+    {
+      "type": "challenge",
+      "prompt": "Great job! Now make CoCo move forward AND say 'Hello!'",
+      "validation": {
+        "mustUseBlocks": ["motion_move_steps", "looks_say"]
+      },
+      "starCriteria": {
+        "oneStar": { "completed": true },
+        "twoStars": { "hintsUsed": { "max": 1 } },
+        "threeStars": { "hintsUsed": { "max": 0 }, "timeSeconds": { "max": 120 } }
+      }
+    },
+    {
+      "type": "free_play",
+      "prompt": "Awesome! Now play around — make CoCo do anything you want!",
+      "availableBlocks": "all_unlocked",
+      "sprites": ["coco"],
+      "background": "garden"
+    }
+  ]
+}
