@@ -1,0 +1,84 @@
+{
+  "id": "lesson-say-hello",
+  "chapterId": "01-first-steps",
+  "slug": "say-hello",
+  "title": "Say Hello!",
+  "sortOrder": 3,
+  "lessonType": "guided",
+  "concepts": ["output", "speech"],
+  "difficulty": "easy",
+  "availableBlocks": [
+    "event_when_flag_clicked",
+    "motion_move_steps",
+    "looks_say",
+    "looks_say_for_seconds"
+  ],
+  "phases": [
+    {
+      "type": "narrative",
+      "scenes": [
+        {
+          "background": "garden",
+          "character": "coco",
+          "subtitle": "I want to talk! Can you help me say something to my friend?",
+          "duration": 4000
+        },
+        {
+          "background": "garden",
+          "character": "coco",
+          "subtitle": "Use the 'say' block to make me speak — it's like giving me a voice!",
+          "duration": 4000
+        }
+      ]
+    },
+    {
+      "type": "guided_coding",
+      "instructions": [
+        {
+          "text": "Start with the 'when flag clicked' block!",
+          "highlightToolbox": "event",
+          "highlightBlock": "event_when_flag_clicked",
+          "hintDelayMs": 15000,
+          "hints": [
+            "Look for the yellow block!",
+            "The yellow flag block always goes at the top.",
+            { "type": "ghost_block", "block": "event_when_flag_clicked", "position": { "x": 180, "y": 80 } }
+          ]
+        },
+        {
+          "text": "Now add the 'say' block — click on the text to change what CoCo says!",
+          "highlightToolbox": "looks",
+          "highlightBlock": "looks_say",
+          "hintDelayMs": 15000,
+          "hints": [
+            "The green blocks make CoCo talk and change looks!",
+            "Find the 'say' block in the green Looks category.",
+            { "type": "ghost_block", "block": "looks_say", "position": { "x": 180, "y": 140 } }
+          ]
+        }
+      ],
+      "availableBlocks": ["event_when_flag_clicked", "looks_say"],
+      "sprites": ["coco"],
+      "background": "garden"
+    },
+    {
+      "type": "challenge",
+      "prompt": "Make CoCo move forward AND say something! Use both move and say blocks!",
+      "validation": {
+        "mustUseBlocks": ["motion_move_steps", "looks_say"]
+      },
+      "starCriteria": {
+        "oneStar": { "completed": true },
+        "twoStars": { "hintsUsed": { "max": 1 } },
+        "threeStars": { "hintsUsed": { "max": 0 }, "timeSeconds": { "max": 120 } }
+      }
+    },
+    {
+      "type": "free_play",
+      "prompt": "Make CoCo tell a story! Use say blocks to make CoCo say different things!",
+      "availableBlocks": "all_unlocked",
+      "sprites": ["coco"],
+      "background": "garden"
+    }
+  ]
+}

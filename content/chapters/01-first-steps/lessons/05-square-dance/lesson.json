@@ -1,0 +1,113 @@
+{
+  "id": "lesson-square-dance",
+  "chapterId": "01-first-steps",
+  "slug": "square-dance",
+  "title": "Square Dance!",
+  "sortOrder": 5,
+  "lessonType": "challenge",
+  "concepts": ["loops", "motion", "sequencing"],
+  "difficulty": "challenge",
+  "availableBlocks": [
+    "event_when_flag_clicked",
+    "motion_move_steps",
+    "motion_turn_right",
+    "motion_turn_left",
+    "looks_say",
+    "control_repeat",
+    "control_wait"
+  ],
+  "phases": [
+    {
+      "type": "narrative",
+      "scenes": [
+        {
+          "background": "garden",
+          "character": "coco",
+          "subtitle": "You've learned so much! Now let's put it all together for the BIG challenge!",
+          "duration": 4000
+        },
+        {
+          "background": "garden",
+          "character": "coco",
+          "subtitle": "Can you make me walk in a perfect SQUARE? That's move, turn, move, turn — four times!",
+          "duration": 5000
+        }
+      ]
+    },
+    {
+      "type": "guided_coding",
+      "instructions": [
+        {
+          "text": "Start with 'when flag clicked'!",
+          "highlightToolbox": "event",
+          "highlightBlock": "event_when_flag_clicked",
+          "hintDelayMs": 15000,
+          "hints": [
+            "The yellow flag block always starts things off!",
+            { "type": "ghost_block", "block": "event_when_flag_clicked", "position": { "x": 180, "y": 80 } }
+          ]
+        },
+        {
+          "text": "Add a 'repeat 4 times' loop — a square has 4 sides!",
+          "highlightToolbox": "control",
+          "highlightBlock": "control_repeat",
+          "hintDelayMs": 15000,
+          "hints": [
+            "Four sides means we repeat 4 times!",
+            "Look for the orange repeat block.",
+            { "type": "ghost_block", "block": "control_repeat", "position": { "x": 180, "y": 140 } }
+          ]
+        },
+        {
+          "text": "Inside the loop, add 'move steps' to walk one side!",
+          "highlightToolbox": "motion",
+          "highlightBlock": "motion_move_steps",
+          "hintDelayMs": 20000,
+          "hints": [
+            "Drop the move block inside the repeat block's mouth!",
+            { "type": "ghost_block", "block": "motion_move_steps", "position": { "x": 220, "y": 175 } }
+          ]
+        },
+        {
+          "text": "After move, add 'turn right 90 degrees' to turn the corner!",
+          "highlightToolbox": "motion",
+          "highlightBlock": "motion_turn_right",
+          "hintDelayMs": 20000,
+          "hints": [
+            "A square corner is exactly 90 degrees!",
+            "Add the turn right block inside the loop, after move.",
+            { "type": "ghost_block", "block": "motion_turn_right", "position": { "x": 220, "y": 215 } }
+          ]
+        }
+      ],
+      "availableBlocks": [
+        "event_when_flag_clicked",
+        "control_repeat",
+        "motion_move_steps",
+        "motion_turn_right"
+      ],
+      "sprites": ["coco"],
+      "background": "garden"
+    },
+    {
+      "type": "challenge",
+      "prompt": "FINAL CHALLENGE! Make CoCo walk in a square using repeat, move, and turn right!",
+      "validation": {
+        "mustUseBlocks": ["control_repeat", "motion_move_steps", "motion_turn_right"],
+        "repeatCountMin": 4
+      },
+      "starCriteria": {
+        "oneStar": { "completed": true },
+        "twoStars": { "hintsUsed": { "max": 1 } },
+        "threeStars": { "hintsUsed": { "max": 0 }, "timeSeconds": { "max": 180 } }
+      }
+    },
+    {
+      "type": "free_play",
+      "prompt": "You completed Chapter 1! Now make the most amazing CoCo program ever! You're a coder!",
+      "availableBlocks": "all_unlocked",
+      "sprites": ["coco"],
+      "background": "garden"
+    }
+  ]
+}

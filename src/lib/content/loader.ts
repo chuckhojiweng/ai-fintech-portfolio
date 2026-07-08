@@ -57,7 +57,13 @@ export async function loadChapterLessons(
 
 function getLessonSlugsForChapter(chapterSlug: string): string[] {
   const chapterLessons: Record<string, string[]> = {
-    "01-first-steps": ["01-hello-coco"],
+    "01-first-steps": [
+      "01-hello-coco",
+      "02-move-and-turn",
+      "03-say-hello",
+      "04-repeat-repeat",
+      "05-square-dance",
+    ],
   };
   return chapterLessons[chapterSlug] || [];
 }
