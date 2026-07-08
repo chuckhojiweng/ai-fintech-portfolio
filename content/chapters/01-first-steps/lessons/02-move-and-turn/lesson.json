@@ -1,0 +1,95 @@
+{
+  "id": "lesson-move-and-turn",
+  "chapterId": "01-first-steps",
+  "slug": "move-and-turn",
+  "title": "Move and Turn!",
+  "sortOrder": 2,
+  "lessonType": "guided",
+  "concepts": ["direction", "motion"],
+  "difficulty": "easy",
+  "availableBlocks": [
+    "event_when_flag_clicked",
+    "motion_move_steps",
+    "motion_turn_right",
+    "motion_turn_left"
+  ],
+  "phases": [
+    {
+      "type": "narrative",
+      "scenes": [
+        {
+          "background": "garden",
+          "character": "coco",
+          "subtitle": "Uh oh! There's a big rock in my way! I need to learn how to TURN!",
+          "duration": 4000
+        },
+        {
+          "background": "garden",
+          "character": "coco",
+          "subtitle": "Use turn blocks to spin me around and I can go anywhere!",
+          "duration": 3500
+        }
+      ]
+    },
+    {
+      "type": "guided_coding",
+      "instructions": [
+        {
+          "text": "First, add the 'when flag clicked' block to start!",
+          "highlightToolbox": "event",
+          "highlightBlock": "event_when_flag_clicked",
+          "hintDelayMs": 15000,
+          "hints": [
+            "Look for the yellow block at the top of the toolbox!",
+            "The 'when flag clicked' block is the yellow flag block.",
+            { "type": "ghost_block", "block": "event_when_flag_clicked", "position": { "x": 180, "y": 80 } }
+          ]
+        },
+        {
+          "text": "Add a 'move 10 steps' block to go forward first!",
+          "highlightToolbox": "motion",
+          "highlightBlock": "motion_move_steps",
+          "hintDelayMs": 15000,
+          "hints": [
+            "The blue blocks make CoCo move!",
+            "Look for 'move steps' — it's the first blue block.",
+            { "type": "ghost_block", "block": "motion_move_steps", "position": { "x": 180, "y": 140 } }
+          ]
+        },
+        {
+          "text": "Now add 'turn right 15 degrees' to change direction!",
+          "highlightToolbox": "motion",
+          "highlightBlock": "motion_turn_right",
+          "hintDelayMs": 15000,
+          "hints": [
+            "The turn right block spins CoCo around!",
+            "Find 'turn right' in the blue Motion blocks.",
+            { "type": "ghost_block", "block": "motion_turn_right", "position": { "x": 180, "y": 200 } }
+          ]
+        }
+      ],
+      "availableBlocks": ["event_when_flag_clicked", "motion_move_steps", "motion_turn_right"],
+      "sprites": ["coco"],
+      "background": "garden"
+    },
+    {
+      "type": "challenge",
+      "prompt": "Help CoCo explore the garden! Make CoCo move AND turn to go around the rock!",
+      "validation": {
+        "mustUseBlocks": ["motion_move_steps", "motion_turn_right"]
+      },
+      "starCriteria": {
+        "oneStar": { "completed": true },
+        "twoStars": { "hintsUsed": { "max": 1 } },
+        "threeStars": { "hintsUsed": { "max": 0 }, "timeSeconds": { "max": 120 } }
+      }
+    },
+    {
+      "type": "free_play",
+      "prompt": "Awesome! Make CoCo do a crazy dance using moves and turns!",
+      "availableBlocks": "all_unlocked",
+      "sprites": ["coco"],
+      "background": "garden"
+    }
+  ]
+}

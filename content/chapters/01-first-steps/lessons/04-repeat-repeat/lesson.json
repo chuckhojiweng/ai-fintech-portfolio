@@ -1,0 +1,96 @@
+{
+  "id": "lesson-repeat-repeat",
+  "chapterId": "01-first-steps",
+  "slug": "repeat-repeat",
+  "title": "Repeat, Repeat!",
+  "sortOrder": 4,
+  "lessonType": "guided",
+  "concepts": ["loops", "repetition"],
+  "difficulty": "standard",
+  "availableBlocks": [
+    "event_when_flag_clicked",
+    "motion_move_steps",
+    "motion_turn_right",
+    "control_repeat"
+  ],
+  "phases": [
+    {
+      "type": "narrative",
+      "scenes": [
+        {
+          "background": "garden",
+          "character": "coco",
+          "subtitle": "There are SO many flowers to pick! Moving one step at a time takes forever!",
+          "duration": 4500
+        },
+        {
+          "background": "garden",
+          "character": "coco",
+          "subtitle": "Let's use a LOOP! A loop does the same thing over and over — like magic!",
+          "duration": 4000
+        }
+      ]
+    },
+    {
+      "type": "guided_coding",
+      "instructions": [
+        {
+          "text": "Add 'when flag clicked' to start your code!",
+          "highlightToolbox": "event",
+          "highlightBlock": "event_when_flag_clicked",
+          "hintDelayMs": 15000,
+          "hints": [
+            "Look for the yellow flag block!",
+            "The yellow 'when flag clicked' block goes at the very top.",
+            { "type": "ghost_block", "block": "event_when_flag_clicked", "position": { "x": 180, "y": 80 } }
+          ]
+        },
+        {
+          "text": "Now add a 'repeat 10 times' block — this makes CoCo do things over and over!",
+          "highlightToolbox": "control",
+          "highlightBlock": "control_repeat",
+          "hintDelayMs": 15000,
+          "hints": [
+            "Look for the orange repeat block!",
+            "The 'repeat' block is in the orange Control category.",
+            { "type": "ghost_block", "block": "control_repeat", "position": { "x": 180, "y": 140 } }
+          ]
+        },
+        {
+          "text": "Put a 'move 10 steps' block INSIDE the repeat block!",
+          "highlightToolbox": "motion",
+          "highlightBlock": "motion_move_steps",
+          "hintDelayMs": 20000,
+          "hints": [
+            "Drag the move block into the mouth of the repeat block!",
+            "The repeat block has a space inside — drop the move block there!",
+            { "type": "ghost_block", "block": "motion_move_steps", "position": { "x": 220, "y": 170 } }
+          ]
+        }
+      ],
+      "availableBlocks": ["event_when_flag_clicked", "control_repeat", "motion_move_steps"],
+      "sprites": ["coco"],
+      "background": "garden"
+    },
+    {
+      "type": "challenge",
+      "prompt": "Make CoCo use a loop to move many times! Use 'repeat' and 'move steps' together!",
+      "validation": {
+        "mustUseBlocks": ["control_repeat", "motion_move_steps"],
+        "repeatCountMin": 3
+      },
+      "starCriteria": {
+        "oneStar": { "completed": true },
+        "twoStars": { "hintsUsed": { "max": 1 } },
+        "threeStars": { "hintsUsed": { "max": 0 }, "timeSeconds": { "max": 150 } }
+      }
+    },
+    {
+      "type": "free_play",
+      "prompt": "Use loops to make CoCo do something amazing! Try repeating moves and turns!",
+      "availableBlocks": "all_unlocked",
+      "sprites": ["coco"],
+      "background": "garden"
+    }
+  ]
+}
